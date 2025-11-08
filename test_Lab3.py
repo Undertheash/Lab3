@@ -28,3 +28,13 @@ def test_bubble_sort_invalid():
     result = Lab3.bubble_sort(input_arr, 3)
 
     assert (result == [])
+
+def test_bubble_sort_with_string_returns_2():
+    input_arr = [64, "34", 25, 12]
+    result = Lab3.bubble_sort(input_arr, Lab3.SORT_ASCENDING)
+    assert result == 2
+
+def test_bubble_sort_with_float_returns_2():
+    input_arr = [64, 34.0, 25, 12]
+    result = Lab3.bubble_sort(input_arr, Lab3.SORT_ASCENDING)
+    assert result == 2

@@ -5,7 +5,13 @@ SORT_DESCENDING = 1
 
 
 def bubble_sort(arr, sorting_order):
-
+    #REQ 04 - 
+    if len(arr) == 0:
+        return 0
+    
+    for item in arr:
+        if not isinstance(item, int):
+            return 2
     # Copy input list to results list
     arr_result = arr.copy()
 
@@ -33,8 +39,9 @@ def bubble_sort(arr, sorting_order):
                 else:
                     # Return an empty array
                     arr_result = []
+    #req 03                
     else:
-        arr_result = -1
+        arr_result = 1
 
     return arr_result
 
